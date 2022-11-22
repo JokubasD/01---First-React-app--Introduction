@@ -1,38 +1,65 @@
-.App {
-  text-align: center;
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.input {
+  width: 100%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card {
+  display: grid;
+  place-items: start;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card__title,
+.card__img {
+  grid-area: 1/ 1;
+}
+.card__img {
+  width: 100%;
+}
+.card__title {
+  z-index: 1;
+  color: white;
+  padding: 0.6em 1.2em;
+  background-color: black;
+  margin: 0;
+  align-self: start;
+}
+.houseContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+.teamItem {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.team__ocupation {
+  color: darkgray;
+}
+.team__title,
+.team__ocupation {
+  margin: 0.7em 0;
+}
+.blackBtn {
+  background-color: black;
   color: white;
+  width: fit-content;
 }
-
-.App-link {
-  color: #61dafb;
+.contactContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.contact {
+  margin: 0;
+}
+@media screen and (max-width: 768px) {
+  .houseContainer {
+    grid-template-columns: repeat(2, 1fr);
   }
-  to {
-    transform: rotate(360deg);
+}
+@media screen and (max-width: 500px) {
+  .houseContainer {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
